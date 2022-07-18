@@ -1,23 +1,50 @@
 public class Main {
     public static void main(String[] args) {
-        suma (5, 10,15);
+        var numeroIf = -9;
+        var numeroWhile = 0;
+        var numeroFor = 0;
+        var estacion= "Verano";
 
-        coche miCoche= new coche();
-        miCoche.agregarPuerta();
-        System.out.println(miCoche.puertas);
-    }
+        if (numeroIf > 0){
+            System.out.println("El numero es positivo");
+        }
+        else if (numeroIf<0){
+            System.out.println("El numero es negativo");
+        }      
+        else{
+            System.out.println("El numero es 0");
+        }
 
-    public static void suma (int a, int b, int c) {
-        int resultado;
-        resultado = a + b + c;
-        System.out.println(resultado);
-    }
+        while(numeroWhile < 3){
+            System.out.println(numeroWhile);
+            numeroWhile= numeroWhile + 1;
+        }
 
+        do{
+            System.out.println(numeroWhile);
+            numeroWhile = numeroWhile +1;
+        } while (numeroWhile<3);
 
-}
-class coche{
-    public int puertas = 4;
-    public void agregarPuerta(){
-        this.puertas++;
+        for(;numeroFor <=3;numeroFor = numeroFor+1){
+            System.out.println(numeroFor);
+        }
+
+        switch(estacion){
+            case "Verano":
+                System.out.println("Es verano");
+                break;
+            case "Otoño":
+                System.out.println("Es Otoño");
+                break;
+            case "Invierno":
+                System.out.println("Es Invierno");
+                break;
+            case "Primavera":
+                System.out.println("Es Primavera");
+                break;
+            default:
+                System.out.println("No es una estacion");
+                break;
+        }
     }
 }
